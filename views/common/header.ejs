@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"> WHSmith Complaints </a>
+      <div class="navbar">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="/">
+            Home <span class="sr-only">(current)</span>
+          </a>
+          <% if(employee) { %>
+          <a class="nav-link" href="employees"> View employees</a>
+          <a class="nav-link" href="complaints"> View complaints</a>
+          <a class="nav-link" href="create-complaint"> Create a complaint </a>
+          <a class="nav-link" href="logout"> <%= employee.employeeID %> (Logout) </a> <%
+          }%> <% if(!employee) { %>
+          <a class="nav-link" href="login"> Login </a>
+          <a class="nav-link" href="create-employee"> Register </a>
+          <% } %>
+        </div>
+      </div>
+    </nav>
+  </header>
+  ;
